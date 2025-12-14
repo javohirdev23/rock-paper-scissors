@@ -3,10 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rock paper scissors</title>
     <link rel="stylesheet" href="./css/output.css" />
+    <script src="./script.js" type="module" defer></script>
   </head>
-  <body>
+  <body class="bg-[#1f214e]">
+    <!-- Tepadagi score bar uchun -->
+    <header>
+      <div
+        class="border-solid border-[3px] border-gray-600 rounded-[15px] w-[700px] max-w-[700px] ml-auto mr-auto mt-[30px] flex justify-between"
+      >
+        <div>
+          <h3
+            class="uppercase font-bold text-[36px] text-white pl-[33px] pt-[27px] pb-[28px] leading-[30px] min-h-[100%]"
+          >
+            rock <br />paper <br />
+            scissors
+          </h3>
+        </div>
+        <div
+          class="flex flex-col border-solid bg-white pt-[16px] pr-[47px] pb-[16px] pl-[47px] mt-[18px] mr-[24px] mb-[18px] rounded-[12px] items-center"
+        >
+          <h4 class="text-[#2A45C2] font-bold text-[18px] tracking-widest">
+            SCORE
+          </h4>
+          <h2 class="text-[#565468] text-[44px] font-bold">12</h2>
+        </div>
+      </div>
+    </header>
+    <!--  rps section  -->
 
+    <section id="gameZone">
+      <div class="flex justify-center items-center mt-[163px]">
+        <img src="./img/triangle.svg" alt="uchburchak" />
+      </div>
+      <div class="flex justify-center items-center gap-[80px] mt-[-360px]">
+        <img
+          id="js-hand"
+          class="hover:shadow-[0px_0px_10px_30px_rgba(255,255,255,0.1)] hover:rounded-[600px] duration-300 cursor-pointer"
+          src="./img/paper.svg"
+          alt="Paper"
+        />
+        <img
+          id="js-hand"
+          class="hover:shadow-[0px_0px_10px_30px_rgba(255,255,255,0.1)] hover:rounded-[600px] duration-300 cursor-pointer"
+          src="./img/scissors.svg"
+          alt="Scissors"
+        />
+      </div>
+      <div class="flex justify-center items-center mt-[24px]">
+        <img
+          id="js-hand"
+          class="hover:shadow-[0px_0px_10px_30px_rgba(255,255,255,0.1)] hover:rounded-[600px] duration-300 cursor-pointer"
+          src="./img/rock.svg"
+          alt="Rock"
+        />
+      </div>
+      <div>
+        <button
+          class="border-white border-[1px] text-white px-[36px] py-[11px] ml-[1000px] mb-[200px] rounded-[10px] tracking-[5px] hover:bg-white hover:text-[#131537] hover:font-bold hover:duration-300 cursor-pointer"
+        >
+          RULES
+        </button>
+      </div>
+    </section>
+    <section id="resultZone" class="flex justify-center items-center hidden">
+      </div>
+        <div class="">
+          <h2 class="text-white">You Picked</h2>
+          <img id="user" class="" src="" alt="User" />
+          <button
+            id="againBtn"
+            class="p-[15px_60px] bg-white rounded-[10px] hover:text-red-500"
+          >
+            Play again
+          </button>
+          <h2 class="text-white">Robot Picked</h2>
+          <img id="robot" class="" src="" alt="Robot" />
+        </div>
+    
+    </section>
   </body>
 </html>
