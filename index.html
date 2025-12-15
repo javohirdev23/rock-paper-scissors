@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock paper scissors</title>
+    
     <link rel="stylesheet" href="./css/output.css" />
     <script src="./script.js" type="module" defer></script>
+    
   </head>
   <body class="bg-[#1f214e]">
     <!-- Tepadagi score bar uchun -->
@@ -67,19 +69,22 @@
         </button>
       </div>
     </section>
-    <section id="resultZone" class="flex justify-center items-center hidden">
+    <!-- ResultZone -->
+    <section id="resultZone" class="mt-[50px] hidden">
       </div>
-        <div class="">
-          <h2 class="text-white">You Picked</h2>
-          <img id="user" class="" src="" alt="User" />
+      <div class=" flex justify-center items-center">      <h2 class="text-white pr-[190px]">You Picked</h2>
+           <h2 class="text-white pl-[190px]">Robot Picked</h2></div>
+        <div class="flex justify-center items-center mt-[30px]">
+    
+          <img id="user" class=" mr-[50px]" src="" alt="User" />
           <button
             id="againBtn"
-            class="p-[15px_60px] bg-white rounded-[10px] hover:text-red-500"
+            class="p-[15px_60px] bg-white rounded-[10px] hover:text-red-500 "
           >
             Play again
           </button>
-          <h2 class="text-white">Robot Picked</h2>
-          <img id="robot" class="" src="" alt="Robot" />
+     
+          <img id="robot" class="ml-[50px]" src="" alt="Robot" />
         </div>
     
     </section>

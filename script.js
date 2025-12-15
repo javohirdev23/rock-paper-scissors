@@ -16,21 +16,28 @@ function robotChoose() {
 function swape(boolean) {
   if (boolean) {
     elGameZone.style.display = "none";
-    elResultZone.style.display = "flex";
+    elResultZone.style.display = "block";
   } else {
     elGameZone.style.display = "block";
     elResultZone.style.display = "none";
   }
 }
 
+let score = 0;
 function checkWiner(user, robot) {
   if (user === robot) {
     return "TIE";
   } else if (user === "paper" && robot === "scissors") {
+    score = score;
     return "ROBOT";
   } else if (user === "scissors" && robot === "rock") {
+    score = score;
     return "ROBOT";
   } else if (user === "rock" && robot === "paper") {
+    score = score;
+    return "ROBOT";
+  } else {
+    score = score;
     return "USER";
   }
 }
@@ -53,3 +60,4 @@ elHands.forEach((elHands) => {
 elBtn.addEventListener("click", () => {
   swape(false);
 });
+checkWiner(user, robot);
