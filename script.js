@@ -18,7 +18,7 @@ function swape(boolean) {
     elGameZone.style.display = "none";
     elResultZone.style.display = "flex";
   } else {
-    elGameZone.style.display = "flex";
+    elGameZone.style.display = "block";
     elResultZone.style.display = "none";
   }
 }

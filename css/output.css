@@ -198,14 +198,14 @@
   .ml-auto {
     margin-left: auto;
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
   .hidden {
     display: none;
-  }
-  .table {
-    display: table;
   }
   .min-h-\[100\%\] {
     min-height: 100%;
@@ -216,14 +216,8 @@
   .max-w-\[700px\] {
     max-width: 700px;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -240,9 +234,6 @@
   .gap-\[80px\] {
     gap: 80px;
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
   .rounded-\[10px\] {
     border-radius: 10px;
   }
@@ -251,13 +242,6 @@
   }
   .rounded-\[15px\] {
     border-radius: 15px;
-  }
-  .rounded-\[600px\] {
-    border-radius: 600px;
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-\[1px\] {
     border-style: var(--tw-border-style);
@@ -283,20 +267,8 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .p-\[15\] {
-    padding: 15;
-  }
-  .p-\[15_\] {
-    padding: 15 ;
-  }
-  .p-\[15px_60\] {
-    padding: 15px 60;
-  }
   .p-\[15px_60px\] {
     padding: 15px 60px;
-  }
-  .p-\[15px_\] {
-    padding: 15px ;
   }
   .px-\[36px\] {
     padding-inline: 36px;
@@ -361,17 +333,6 @@
   }
   .uppercase {
     text-transform: uppercase;
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .shadow-\[0px_0px_10px_30px_rgba\(255\,255\,255\,0\.1\)\] {
-    --tw-shadow: 0px 0px 10px 30px var(--tw-shadow-color, rgba(255,255,255,0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .duration-300 {
     --tw-duration: 300ms;
@@ -447,6 +408,10 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-shadow {
   syntax: "*";
   inherits: false;
@@ -512,15 +477,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -528,6 +484,7 @@
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-duration: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -542,8 +499,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
-      --tw-duration: initial;
     }
   }
 }
